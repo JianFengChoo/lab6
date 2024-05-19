@@ -25,8 +25,6 @@ void main() {
       final setting = find.byIcon(Icons.settings_outlined);
 
       await tester.tap(agree);
-      await tester.pumpAndSettle();
-
       await tester.tap(activateButton);
       await tester.pumpAndSettle();
 
