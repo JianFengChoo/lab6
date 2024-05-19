@@ -45,19 +45,15 @@ void main() {
 
       await tester.tap(person);
       await tester.pumpAndSettle();
-      await Future.delayed(Duration(seconds: 2));
 
       await tester.tap(add);
       await tester.pumpAndSettle();
-      await Future.delayed(Duration(seconds: 2));
 
       await tester.tap(submit);
       await tester.pumpAndSettle();
-      await Future.delayed(Duration(seconds: 2));
 
       await tester.tap(setting);
       await tester.pumpAndSettle();
-      await Future.delayed(Duration(seconds: 2));
 
       await tester.tap(home);
       await tester.pumpAndSettle();
