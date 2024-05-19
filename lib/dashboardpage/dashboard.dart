@@ -478,7 +478,6 @@ class _DashBoardState extends State<DashBoard> {
                       ),
                     ),
                     GestureDetector(
-                      key: Key("factory3"),
                       onTap: () {
                         setState(() {
                           f1 = Colors.grey;

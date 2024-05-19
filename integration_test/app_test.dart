@@ -10,7 +10,7 @@ void main() {
       app.main();
       await tester.pumpAndSettle();
       
-      final agree = find.byType(Checkbox);
+      final agree = find.byType(CheckboxListTile);
       final activateButton = find.byKey(Key("activate"));
 
       final otpButton = find.byKey(Key("otpButton"));
