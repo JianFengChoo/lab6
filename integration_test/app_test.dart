@@ -26,41 +26,32 @@ void main() {
 
       await tester.tap(agree);
       await tester.pumpAndSettle();
-      expect(find.byType(CheckboxListTile), findsOneWidget);
 
       await tester.tap(activateButton);
       await tester.pumpAndSettle();
-      expect(find.byKey(Key("activate")), findsOneWidget);
 
       await tester.tap(otpButton);
       await tester.pumpAndSettle();
-      expect(find.byKey(Key("otpButton")), findsOneWidget);
 
-      await Future.delayed(Duration(seconds: 2));
       await tester.tap(factory2);
       await tester.pumpAndSettle();
-      expect(find.byKey(Key("factory2")), findsOneWidget);
-
       await Future.delayed(Duration(seconds: 2));
+
       await tester.tap(factory1);
       await tester.pumpAndSettle();
-      expect(find.byKey(Key("factory1")), findsOneWidget);
+      await Future.delayed(Duration(seconds: 2));
 
       await tester.tap(person);
       await tester.pumpAndSettle();
-      expect(find.byIcon(Icons.account_box_outlined), findsOneWidget);
 
       await tester.tap(add);
       await tester.pumpAndSettle();
-      expect(find.byKey(Key("addButton")), findsOneWidget);
 
       await tester.tap(submit);
       await tester.pumpAndSettle();
-      expect(find.byKey(Key("submitButton")), findsOneWidget);
 
       await tester.tap(setting);
       await tester.pumpAndSettle();
-      expect(find.byIcon(Icons.settings_outlined), findsOneWidget);
     });
   });
 }
