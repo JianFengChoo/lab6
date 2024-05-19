@@ -26,7 +26,7 @@ void main() {
 
       await tester.tap(agree);
       await tester.pumpAndSettle();
-      expect(find.byType(Checkbox), findsOneWidget);
+      expect(find.byType(CheckboxListTile), findsOneWidget);
 
       await tester.tap(activateButton);
       await tester.pumpAndSettle();
