@@ -11,6 +11,14 @@ void main() {
       await tester.pumpAndSettle();
       
       final agree = find.byType(Checkbox);
+      expect(tester.getSemantics(agree), matchesSemantics(
+        hasTapAction: true,
+        hasCheckedState: true,
+        isChecked: false,
+        hasEnabledState: true,
+        isEnabled: true,
+        isFocusable: true
+      ),);
       final activateButton = find.byKey(Key("activate"));
 
       final otpButton = find.byKey(Key("otpButton"));
