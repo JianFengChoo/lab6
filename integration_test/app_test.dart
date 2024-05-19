@@ -15,7 +15,6 @@ void main() {
 
       final otpButton = find.byKey(Key("otpButton"));
 
-      final home = find.byIcon(Icons.home_outlined);
       final factory1 = find.byKey(Key("factory1"));
       final factory2 = find.byKey(Key("factory2"));
 
@@ -25,12 +24,16 @@ void main() {
 
       final setting = find.byIcon(Icons.settings_outlined);
 
+      final home = find.byIcon(Icons.home_outlined);
+
       await tester.tap(agree);
       await tester.tap(activateButton);
       await tester.pumpAndSettle();
+      await Future.delayed(Duration(seconds: 2));
 
       await tester.tap(otpButton);
       await tester.pumpAndSettle();
+      await Future.delayed(Duration(seconds: 2));
 
       await tester.tap(factory2);
       await tester.pumpAndSettle();
@@ -42,14 +45,21 @@ void main() {
 
       await tester.tap(person);
       await tester.pumpAndSettle();
+      await Future.delayed(Duration(seconds: 2));
 
       await tester.tap(add);
       await tester.pumpAndSettle();
+      await Future.delayed(Duration(seconds: 2));
 
       await tester.tap(submit);
       await tester.pumpAndSettle();
+      await Future.delayed(Duration(seconds: 2));
 
       await tester.tap(setting);
+      await tester.pumpAndSettle();
+      await Future.delayed(Duration(seconds: 2));
+
+      await tester.tap(home);
       await tester.pumpAndSettle();
     });
   });
